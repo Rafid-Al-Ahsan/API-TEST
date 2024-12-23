@@ -1,4 +1,3 @@
-// Import required modules
 const axios = require('axios');
 const fs = require('fs');
 const { parse } = require('json2csv');

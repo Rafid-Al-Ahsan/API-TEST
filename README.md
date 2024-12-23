@@ -35,5 +35,5 @@ npm install axios json2csv
 ```
 
 ## Explanation
-We retrived the data using the SpaceX REST API. The axios library was to send the HTTP request to the API endpoint and from the response we collect relevant data such as - mission name, launch date and rocket ID. The is formatted into payload and then sent using HTTP POST request. The fetched data is exported to an csv file, for this we used a third-party libary json2csv. For error handling if the API returns 403 then the request is skipped. 
+I was unable to retrive the  GraphQL APIs of SpaceX and I am not familiar with GraphQL. I rather used the https://api.spacexdata.com/v5/launches/latest api. Using this api I retrived the data using the SpaceX REST API. The axios library was to send the HTTP request to the API endpoint and from the response we collect relevant data such as - mission name, launch date and rocket ID. The is formatted into payload and then sent using HTTP POST request. The fetched data is exported to an csv file, for this we used a third-party libary json2csv. For error handling if the API returns 403 then the request is skipped. 
 

@@ -8,7 +8,7 @@ const SPACEX_REST_API = 'https://api.spacexdata.com/v5/launches/latest';
 // REST API endpoint
 const REST_API_ENDPOINT = 'https://jsonplaceholder.typicode.com/posts';
 
-// Step 1: Fetch data from SpaceX REST API
+// Fetching data from SpaceX REST API
 async function fetchLaunches() {
     try {
         const response = await axios.get(SPACEX_REST_API);
@@ -24,7 +24,7 @@ async function fetchLaunches() {
     }
 }
 
-// Step 2: Post launch details to REST API
+// Post launch details to REST API
 async function postLaunchDetails(launch) {
     const payload = {
         title: `${launch.mission_name} Launch`,
@@ -65,7 +65,7 @@ async function retryRequest(requestFn, retries = 3, delay = 1000) {
     console.error('All retries failed.');
 }
 
-// Step 5: Save launches to a CSV file
+//  Save launches to a CSV file
 function saveLaunchesToCSV(launches) {
     const fields = ['mission_name', 'rocket.rocket_name', 'launch_date_local'];
     const opts = { fields };
@@ -79,7 +79,7 @@ function saveLaunchesToCSV(launches) {
     }
 }
 
-// Step 4: Automate the workflow
+//  Automate the workflow
 async function main() {
     try {
         // Fetch data from REST API
